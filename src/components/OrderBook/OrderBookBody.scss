@@ -1,0 +1,15 @@
+.order-book__body {
+  box-sizing: border-box;
+  max-height: 5000px;
+  transition: max-height 0.2s ease-in-out;
+  padding: 0 5px 10px;
+  transform: scaleY(1);
+}
+
+.collapsed {
+  max-height: 0;
+  overflow-y: hidden;
+  overflow-x: hidden;
+  min-height: 0px;
+  padding: 0 5px;
+}

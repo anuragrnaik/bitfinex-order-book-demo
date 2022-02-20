@@ -1,0 +1,40 @@
+.order-book {
+  &__header {
+    display: flex;
+    min-height: 30px;
+    border-bottom: 1px solid rgba(100, 100, 100, 0.3);
+    flex-direction: row;
+    padding: 0 0 0 5px;
+    align-items: stretch;
+    font-size: 0.8rem;
+    cursor: pointer;
+
+    &__title {
+      text-transform: uppercase;
+      margin-right: 4px;
+
+      &--conv {
+        opacity: 0.6;
+      }
+    }
+
+    & > div {
+      display: flex;
+      align-items: center;
+
+      &:first-child {
+        flex: 1 1;
+      }
+    }
+
+    &__options {
+      margin: 0 10px;
+    }
+
+    &__icon {
+      width: 0.8rem;
+      opacity: 0.6;
+      margin-right: 5px;
+    }
+  }
+}

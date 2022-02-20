@@ -1,0 +1,96 @@
+.order-book__body {
+  box-sizing: border-box;
+  max-height: 5000px;
+  transition: max-height 0.2s ease-in-out;
+  padding: 0 5px 10px;
+  transform: scaleY(1);
+  min-height: 50vh;
+}
+
+.order-book__content {
+  display: flex;
+  box-sizing: border-box;
+  flex-wrap: wrap;
+}
+
+.order-book__table {
+  display: flex;
+  flex: 1 1;
+  justify-content: right;
+
+  &--bids {
+    margin-right: 2px;
+  }
+
+  > table {
+    position: relative;
+    width: 100%;
+    min-width: 270px;
+    border-collapse: collapse;
+
+    td, th {
+      text-align: right;
+      border: none;
+      padding: 2px;
+    }
+
+    thead {
+      opacity: .6;
+      text-transform: uppercase;
+    }
+
+    tbody {
+      tr:hover {
+        background-color: #0E3452;
+      }
+    }
+
+    thead, tbody {
+      font-size: 11px;
+      cursor: pointer;
+    }
+  }
+}
+
+.order-book__table--bids {
+  tbody {
+    tr:hover::before {
+      content: "\25AE";
+    }
+  }
+}
+
+.order-book__table--offers {
+  tbody {
+    tr:hover::after {
+      content: "\25AE";
+    }
+  }
+}
+
+.collapsed {
+  max-height: 0;
+  overflow-y: hidden;
+  overflow-x: hidden;
+  min-height: 0px;
+  padding: 0 0px;
+}
+
+.order-highlighter {
+  position: absolute;
+  height: 17px;
+  transition: width .3s linear;
+}
+
+@media screen and (max-width: 578px) {
+  .order-book__table--bids {
+    order: 2;
+    margin-top: 2px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid rgb(0, 0, 0);
+
+    thead {
+      display: none;
+    }
+  }
+}
