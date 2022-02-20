@@ -1,0 +1,5 @@
+{
+  "projects": {
+    "default": "bitfinex-order-book-demo"
+  }
+}
